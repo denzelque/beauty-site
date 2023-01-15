@@ -1,6 +1,7 @@
 :root {
     --color-black: #000000;
     --color-gray: #333333;
+    --color-gray-light: #c4c4c4;
     --color-light: #efefef;
     --color-white: #ffffff;
     --color-accent: #f13c6e;
@@ -44,6 +45,21 @@ a {
     color: inherit;
 }
 
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+
+}
+
 .container {
     width: min(100% - var(--gap) * 2, var(--container-width));
     margin-inline: auto;
@@ -83,7 +99,6 @@ a {
     border-radius: 30px;
 }
 
-
 .header {
     display: flex;
     flex-direction: column;
@@ -100,7 +115,6 @@ a {
     align-items: center;
     justify-content: space-between;
 }
-
 
 .logo__link {
     display: flex;
@@ -166,8 +180,6 @@ a {
     padding: 7px var(--gap-xs);
 }
 
-.main {}
-
 .hero {
     background-color: var(--color-accent);
     background-image: url(../img/rectangle.png);
@@ -198,16 +210,9 @@ a {
     margin-bottom: 4px;
 }
 
-
-.hero__button {}
-
-
-.btn-secondary {}
-
 .offers {
     margin-bottom: 100px;
 }
-
 
 .offers__title {
     font-size: 1.5rem;
@@ -229,7 +234,7 @@ a {
     align-items: center;
     background-color: var(--color-white);
     padding: 25px;
-    flex: 1S;
+    flex: 1;
 }
 
 .offer-item__title {
@@ -242,8 +247,6 @@ a {
     order: -1;
 }
 
-.offer-item__image {}
-
 .offer-item__price {
     font-weight: 500;
     font-size: 21px;
@@ -252,4 +255,173 @@ a {
     color: var(--color-black);
 }
 
-.offer-item__button {}
+.submit {
+    margin-bottom: 100px;
+    color: var(--color-white);
+}
+
+.submit__content {
+    display: flex;
+    gap: var(--gap-lg);
+}
+
+.subscribe {
+    background-color: var(--color-accent);
+    flex: 1;
+    padding: 25px var(--gap-xl);
+    background-image: url(../img/letter.png);
+    background-position: 95% 50%;
+    background-repeat: no-repeat;
+}
+
+.subscribe__content {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    max-width: 250px;
+}
+
+.subscribe__title {
+    font-size: 1.125rem;
+    line-height: var(--line-height);
+
+}
+
+.subscribe__description {
+    font-size: 0.875rem;
+    line-height: var(--gap-lg);
+}
+
+.subscribe__form {
+    max-width: 225px;
+}
+
+.subscribe__input {
+    font-size: 0.875rem;
+    padding: 0.25em 25px;
+    display: block;
+    width: 100%;
+    min-height: 35px;
+
+    background: var(--color-light);
+    border: none;
+    border-radius: 30px;
+
+}
+
+.subscribe__input::placeholder {
+    color: var(--color-gray-light);
+}
+
+.our-shops {
+    background-color: var(--color-accent);
+    flex: 1;
+    padding: 25px var(--gap-xl);
+    background-image: url(../img/car.png);
+    background-position: 95% 50%;
+    background-repeat: no-repeat;
+}
+
+.our-shops__content {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    max-width: 250px;
+}
+
+.our-shops__title {
+    font-size: 1.125rem;
+    line-height: var(--line-height);
+}
+
+.our-shops__description {
+    font-size: 0.875rem;
+    line-height: var(--gap-lg);
+}
+
+.our-shops__buttons {
+    min-height: 35px;
+}
+
+.brands {
+    min-height: 357px;
+    margin: 80px 80px;
+}
+
+.brands__content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-white);
+}
+
+.brands__description {
+    align-content: center;
+    padding: 35px 60px;
+    min-width: 277px;
+    border: 1px solid var(--color-light);
+}
+
+.footer__primary {
+    background-color: var(--color-white);
+}
+
+.footer__navbar {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 86px 60px;
+    justify-content: space-between;
+}
+
+.footer__title {
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 22px;
+    color: var(--color-black);
+    margin-bottom: 30px;
+}
+
+.footer__list {
+    list-style: none;
+    font-size: 0.75rem;
+    line-height: 28px;
+    color: #828282;
+    margin-top: 25px;
+}
+
+.footer__navbar__content {
+    margin: 60px 60px;
+}
+
+.footer__secondary {
+    margin-top: 1px;
+    background-color: var(--color-white);
+    min-height: 120px;
+}
+
+.footer__secondary__content {
+    display: flex;
+    justify-content: space-between;
+    padding: 37px;
+}
+
+.social__media {
+    display: flex;
+    gap: var(--gap);
+    align-items: center;
+}
+
+.last__footer {
+    background-color: var(--color-light);
+    min-height: 64px;
+}
+
+.last__footer__content {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    line-height: 14px;
+    color: #828282;
+    padding: 25px;
+}
