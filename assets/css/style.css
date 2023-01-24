@@ -249,7 +249,6 @@ a {
     font-weight: 500;
     font-size: 21px;
     letter-spacing: 0.05em;
-
     color: var(--color-black);
 }
 
@@ -300,11 +299,9 @@ a {
     display: block;
     width: 100%;
     min-height: 35px;
-
     background: var(--color-light);
     border: none;
     border-radius: 30px;
-
 }
 
 .subscribe__input::placeholder {
